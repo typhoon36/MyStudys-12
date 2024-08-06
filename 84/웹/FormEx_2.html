@@ -1,0 +1,86 @@
+html>
+<head>
+  <script>
+    function handleSubmit(event) {
+      // 기본 폼 제출 동작을 막습니다.
+      event.preventDefault();
+      
+      // 입력된 값을 가져옵니다.
+      const name = document.querySelector('input[name="name"]').value;
+      const password = document.querySelector('input[name="password"]').value;
+      const gender = document.querySelector('input[name="gender"]:checked');
+      const parts_eng = document.querySelector('input[name="part_eng"]').checked;
+      const parts_math = document.querySelector('input[name="part_math"]').checked;
+      
+      // 성별 값을 확인합니다.
+    let genderText;
+    if (gender) {
+    		if (gender.value === 'M') 
+		{
+      			genderText = '남자';
+    		} 
+		else if (gender.value === 'F') 
+		{
+      			genderText = '여자';
+    		}
+  	} 
+	else 
+	{
+    		genderText = '선택 안 함';
+  	}
+
+      // 응시 분야 상태를 문자열로 설정합니다.
+      let partsText = '';
+      if (parts_eng) {
+        partsText += '영어 ';
+      }
+      if (parts_math) {
+        partsText += '수학 ';
+      }
+      if (partsText === '') {
+        partsText = '없음';
+      }
+      
+      // 결과를 표시할 요소를 선택합니다.
+      const resultElement = document.getElementById('result');
+      
+      // 결과 요소의 내용을 업데이트합니다.
+      resultElement.innerHTML = `
+        <p>입력된 아이디: ${name}</p>
+        <p>입력된 비밀번호: ${password}</p>
+        <p>선택된 성별: ${genderText}</p>
+        <p>선택된 응시 분야:  ${partsText.trim()}</p>`;
+    }
+  </script>
+</head>
+
+<body>
+<form onsubmit="handleSubmit(event)">
+	<p>
+		<strong>아이디</strong>
+		<input type="text" name="name" value="아이디 입력">
+	</p>
+	<p>
+		<strong>비밀번호</strong>
+		<input type="password" name="password" value="비밀번호 입력">
+	</p>
+	<p>
+		<strong>성별</strong>
+		<input type="radio" name="gender" value="M">남자
+		<input type="radio" name="gender" value="F">여자	
+	</p>
+	<p>
+		<strong>응시분야</strong>
+		<input type="checkbox" name="part_eng" value="Yes">영어
+		<input type="checkbox" name="part_math" value="Yes">수학	
+	</p>
+	<p>
+		<input type="submit" value="제출">
+	</p>
+</form>
+
+<!-- 결과를 표시할 요소 -->
+<div id="result"></div>
+
+</body>
+</html>

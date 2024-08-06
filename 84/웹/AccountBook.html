@@ -1,0 +1,59 @@
+<html>
+	<head>
+	<title>AccountBook</title>
+	</head>
+
+	<body>
+	<form method="post" action="AccountBook.html">
+	<!--자기 자신의 페이지를 호출할것이기에 주소를 쓸 필요는 없으나,reset시 호출하기위함.--->
+
+	<table border="1" bordercolor="blue" width="500" height="300" align="center" >
+	            <tr bgcolor="blue" align="center">
+			<td colspan="3" span style="color:white">오늘의 수입/지출</td>
+
+		</tr>
+		<tr align="center" bgcolor="skyblue">
+			<td>내용</td>
+			<td>수입</td>
+			<td>지출</td>
+		</tr>
+		<tr>
+			<td>월급</td>
+			<td><input type="text" size="15" maxlength="12" name="pay_earning" value="1,000,000" style="text=align: center; Padding-right:1px"border:none></td>
+			<td><input type="text" size="15" maxlength="12" name="pay_expense" value="0" style="text=align: center; Padding-right:1px"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>점심값</td>
+			<td><input type="text" size="15" maxlength="12" name="get_lunch" value="0" style="text=align: right; Padding-right:1px"></td>
+			<td><input type="text" size="15" maxlength="12" name="cost_lunch" value="0" style="text=align: right; Padding-right:1px"></td></td>
+		</tr>
+		<tr>
+			<td>부모님 선물</td>
+			<td><input type="text" size="15" maxlength="12" name="parent_get" value="0"></td>
+			<td><input type="text" size="15" maxlength="12" name="parent_gift" value="0"></td>
+		</tr>
+		<tr>
+			<td rowspan="3" align="center" bgcolor="skyblue">총계</td>
+			<td>수입</td>
+			<td>지출</td>
+		</tr>
+		<tr>
+			<td id="result_sum">1,000,000</td>
+			<td id="tot_expense">0</td>
+		</tr>
+		<tr>
+			<td>남은돈</td>
+		   	<td id="tot_result">1000000</td>
+		</tr>
+
+	</table>
+	<br>
+	<div style="text-align:center">
+	<input type="button" value="확인" onclick="MySend(this.form)">
+	<input type="reset" value="재작성" onclick="MyReset(this.form)">
+	</div>
+
+           </body>
+	
+</html>
