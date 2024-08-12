@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>아이템관리</title>
+	</head>
+
+	<body>
+		<div style= "text-align:center">
+		<h2> ▶아이템 입력 form✔ </h2>
+		
+		<form method= "post" action="Item_Print.php"
+			<input type = "hidden" name = "title" value = "아이템 입력 양식">
+
+			<table border = "1" width = "640" cellspcing = "1" cellpacing = "4" 
+				style = "margin-left : auto; margin-right : auto;">
+				<tr>
+					<td align= "right">*아이템 이름 : </td>
+					<td><input type = "text"  maxlength = "12" name = "ItemName" value="guest" ></td>
+				</tr>
+
+				<tr>
+					<td align= "right">*레벨 (1~30) : </td>
+					<td><input type = "text" maxlength = "12" name = "ItemLevel"  value ="0" ></td>
+				</tr>
+
+				<tr>
+				    <td align= "right">* 공격 상승률 : </td>
+					<td><input type = "text" maxlength = "12" name = "ItemAttRate"  value ="0" ></td>					
+				</tr>
+
+					<tr>
+				    <td align= "right">* 가격 : </td>
+					<td><input type = "text" maxlength = "12" name = "ItemPrice"  value ="0" ></td>					
+				</tr>
+				<br>
+				<table border="0" width="640" style="margin-left: auto; margin-right: auto;">
+				<tr>
+					<td align="center">
+						<input type="submit" value="확인"> &nbsp; &nbsp;
+						<input type="reset" value="다시작성">
+					</td>
+				</tr>
+		</table>
+		</form>
+
+		</div>
+	</body>
+
+
+
+
+
+</html>

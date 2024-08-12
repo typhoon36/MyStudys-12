@@ -1,0 +1,12 @@
+{
+    "itemArr": [
+        {
+            "idx": "25",
+            "ItemName": "로저",
+            "ItemLevel": "1",
+            "ItemAttRate": "100",
+            "ItemPrice": "10000",
+            "Info": null
+        }
+    ]
+}
