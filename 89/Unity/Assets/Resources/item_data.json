@@ -1,0 +1,36 @@
+{
+    "itemArr": [
+        {
+            "idx": "38",
+            "ItemName": "xxx",
+            "ItemLevel": "1",
+            "ItemAttRate": "0.1",
+            "ItemPrice": "1000",
+            "Info": null
+        },
+        {
+            "idx": "34",
+            "ItemName": "로비",
+            "ItemLevel": "2",
+            "ItemAttRate": "2",
+            "ItemPrice": "2",
+            "Info": null
+        },
+        {
+            "idx": "33",
+            "ItemName": "한성",
+            "ItemLevel": "2",
+            "ItemAttRate": "2",
+            "ItemPrice": "2",
+            "Info": null
+        },
+        {
+            "idx": "31",
+            "ItemName": "홍길동",
+            "ItemLevel": "1",
+            "ItemAttRate": "2",
+            "ItemPrice": "1",
+            "Info": null
+        }
+    ]
+}
